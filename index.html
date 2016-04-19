@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta charset=utf-8>
+    <meta Http-Equiv="Cache-Control" Content="no-cache">
+    <meta Http-Equiv="Pragma" Content="no-cache">
+    <meta Http-Equiv="Expires" Content="0">
+    <title>Bosch Cottage Kitchen</title>
+    <meta name="viewport" />
+    <link rel="shortcut icon" href="http://staging.cottagelife.com/wp-content/themes/clife/favicon.ico" />
+    <link rel="stylesheet" href="css/stylesc619.css?v=1.0">
+
+    <link rel="stylesheet" href="css/universal_assets.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link   rel='stylesheet'type='text/css' href="css/bootstrap.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="font_awesome/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="font_awesome/css/font-awesome.min.css">
+
+    <script src="scripts/jquery-1.11.2.min.js"></script>
+    <script src="scripts/slideout.js"></script>
+    <script src="scripts/universal_assets.js"></script>
+
+    <!--angular scripts -->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/ui-bootstrap-tpls-0.12.1.min.js"></script>
+    <script src="scripts/app/app.js"></script>
+    <script src="scripts/app/controller/homeController.js"></script>
+    <script src="scripts/app/controller/modalInstanceController.js"></script>
+    <script src="scripts/socialShare.js"></script>
+    <script src="scripts/app/controller/kitchenbuilderController.js"></script>
+    <script src="scripts/app/factory/datafactory.js"></script>
+    <!--Google Analytics-->
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-971217-11']);
+        _gaq.push(['_setDomainName', 'none']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+        _gaq.push(['_trackPageLoadTime']);
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <!--End Google Analytics-->
+    <!--Code for tracking Google AdSense in Google Analytics-->
+    <script type="text/javascript">window.google_analytics_uacct = "UA-971217-11";</script>
+    <script type="text/javascript">window.google_analytics_domain_name="none";</script>
+    <!--End code for tracking Google AdSense in Google Analytics-->
+    
+    <!-- Scripts added as client requested -->
+
+<style>
+body {
+	font-family: sans-serif
+	}
+</style>
+
+    <!-- Scripts added as client requested ends-->
+
+
+
+
+
+</head>
+<body ng-app="homeApp">
+<div id="menu" class="slideout-wrapper"></div>
+<div id="panel" class="slideout-panel">
+    <div id="site-head">
+
+        <div id="menu" class="slideout-wrapper">
+            <h2>Mob Nav</h2>
+            <div id="panel">
+                <h4>mob panel</h4>
+            </div>
+        </div>
+
+        <div id="network-wrap">
+            <div class="social_shell clearfix">
+                <div class="social_nav">
+                    <div class="content">
+                        <ul>
+                            <li><a id="newsletter" target="_blank" href="http://cottagelife.com/60984/uncategorized/sign-up-for-the-dockside-enewsletter">Newsletter</a></li><li ><a id="fb"  target="_blank" class="icon" href="http://www.facebook.com/cottagelife">Facebook</a></li><li ><a id="tw" target="_blank" class="icon" href="http://twitter.com/cottagelife">Twitter</a></li><li ><a id="inst"  target="_blank" class="icon" href="http://instagram.com/cottagelife/">Instagram</a></li><li ><a id="pin"  target="_blank" class="icon" href="http://www.pinterest.com/cottagelife/">Pintrest</a></li><li ><a id="yt" target="_blank" class="icon social_last" href="http://www.youtube.com/user/CottageLifeMagazine">YouTube</a></li>                        </ul>
+                    </div>
+                </div>
+                <div class="site_nav clearfix">
+                    <div class="mobile_ham">
+                        <div id="simple-menu">Menu</div>
+                    </div>
+                    <div class="site_brand">
+                        <a id="network-logo" href="http://cottagelife.com/" target="_blank">News</a>
+                    </div>
+                    <ul class="uNav">
+                        <li id="cl-blog"><a href="http://cottagelife.com/" target="_blank">News</a></li>
+                        <li id="cl-television"><a href="http://tv.cottagelife.com/" target="_blank" style="padding-left:0px;">Television</a></li>
+                        <li id="cl-magazine"><a href="http://cottagelife.com/98918/magazine/spring-2015" target="_blank">Magazine</a></li>
+                        <li id="cl-shows"><a href="http://shows.cottagelife.com/" target="_blank">Consumer Shows</a></li>
+                        <li id="cl-shop"><a href="http://shop.cottagelife.com/" target="_blank">Shop</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="shell" >
+
+        <!-- Kitchen Builder Section -->
+        <div class="content" style="position:relative; text-align:center">
+            <div ng-include="'kitchenBuilder.html'"></div>
+        </div>
+        <!-- Kitchen Builder Section End-->
+
+
+        <div class="container" ng-controller="homeCtrl" style="background-color: #ffffff" >
+
+            <!-- Blog Section -->
+            <div class="editorials" style="border:0px;">
+                <div class="story_shell clearfix">
+                    <div ng-repeat="blog in  blogs" class="story">
+                        <a ng-href="{{blog.link}}"  target="_blank">
+                            <div class="img_container">
+                                <img ng-src="{{blog.imageUrl}}" alt="{{blog.name}}">
+                            </div>
+                            <div class="story_desc">
+                                <span class="cl_color">{{blog.header}}</span>
+                                <h5>{{blog.name}}</h5>
+                                <span class="cl_devision">{{blog.smallline}}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog Section End-->
+
+
+            <!-- Video Section -->
+            <div class="editorials">
+                <div class="story_shell clearfix">
+                    <div ng-repeat="video in  videos" class=" story">
+                        <div ng-switch="isMobile">
+                        <a  ng-switch-when="false"  href="" ng-click="open($index)">
+                            <div class="img_container">
+                                <img ng-src="{{video.imageUrl}}" alt="{{video.name}}">
+                            </div>
+                            <div class="story_desc">
+                                <span class="cl_color">{{video.name}}</span>
+                                <h5>{{video.title}}</h5>
+                                <span class="cl_devision">{{video.description}}</span>
+                            </div>
+                        </a>
+                            <a  ng-switch-when="true"  href="{{video.mobileUrl}}"  target="_blank">
+                                <div class="img_container">
+                                    <img ng-src="{{video.imageUrl}}" alt="{{video.name}}">
+                                </div>
+                                <div class="story_desc">
+                                    <span class="cl_color">{{video.name}}</span>
+                                    <h5>{{video.title}}</h5>
+                                    <span class="cl_devision">{{video.description}}</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Video Section End -->
+
+
+            <!-- Bosch Banner Section -->
+            <div class="editorials" style="border:0px;">
+                <!--<a href="http://bosch-home.ca?cid=configurator%7Ccoop%7C1215%7Cfix%7C%7Ccottagelife%7Cros%7Cadbund" target="_blank">-->
+                <a href="http://bosch-home.ca?cid=configurator|coop|1215|fix||cottagelife|ros|adbund" target="_blank">
+                    <img src="img/BSH cottage life 940x230 i1B.jpg" width="100%" alt="Cottage life"/></a>
+            </div>
+            <!-- Bosch Banner Section End-->
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div id="footer">
+    <div id="uniFooter" class="clearfix">
+        <div id="f_social">
+            <ul>
+                <li><a id="footer_fb" href="http://www.facebook.com/cottagelife" target="_blank">Link to Facebook</a></li>
+                <li><a id="footer_tw" href="http://twitter.com/cottagelife" target="_blank">Link to Twitter</a></li>
+                <li><a id="footer_inst" href="http://instagram.com/cottagelife/" target="_blank">Link to Instagram</a></li>
+                <li><a id="footer_pin" href="http://www.pinterest.com/cottagelife/" target="_blank">Link to Pintrest</a></li>
+                <li><a id="footer_yt" href="http://www.youtube.com/user/CottageLifeMagazine" target="_blank">Link to YouTube</a></li>
+            </ul>
+        </div>
+        <div>
+            <div id="f_icon">
+                <a href="http://cottagelife.com/">cottage life blog site</a>
+            </div>
+            <div class="f_links_container">
+                <div id="f_links" class="clearfix">
+                    <div><a href="http://cottagelife.com/about-us" target="_blank">About</a></div>
+                    <div><a href="http://cottagelife.com/contact-us" target="_blank">Contact</a></div>
+                    <div><a href="http://cottagelife.com/privacy-policy" target="_blank">Privacy Policy</a></div>
+                    <div><a href="http://cottagelife.com/terms-conditions" target="_blank">Terms &amp; Conditions</a></div>
+                    <div><a href="http://cottagelife.com/60984/uncategorized/sign-up-for-the-dockside-enewsletter" target="_blank">Newsletter</a></div>
+                    <div><a href="http://cottagelife.com/advertise-with-us" target="_blank">Advertise</a></div>
+                </div>
+       			<div class="copyright">&copy; Cottage Life Media, a division of Blue Ant Media Partnership. Part of the Cottage Life Network.</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer Section End-->
+
+
+<!--pdf scripts-->
+<script type="text/javascript" src="scripts/html2canvas.js"></script>
+<script type="text/javascript" src="scripts/jspdf/jspdf.js"></script>
+<script type="text/javascript" src="scripts/jspdf/libs/FileSaver.js/FileSaver.js"></script>
+<script type="text/javascript" src="scripts/jspdf/jspdf.plugin.addimage.js"></script>
+<script type="text/javascript" src="scripts/jspdf/jspdf.plugin.split_text_to_size.js"></script>
+<script  type="text/javascript" src="scripts/jspdf/libs/Deflate/adler32cs.js"></script>
+<script  type="text/javascript" src="scripts/jspdf/libs/Deflate/deflate.js"></script>
+
+<script  type="text/javascript" src="scripts/jspdf/libs/Blob/Blob.js"></script>
+<script  type="text/javascript" src="scripts/jspdf/libs/Blob/BlobBuilder.js"></script>
+
+
+
+</body>
+</html>

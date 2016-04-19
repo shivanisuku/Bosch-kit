@@ -1,0 +1,692 @@
+/*
+    css rules for the slideout mobile element for the page
+*/
+body{
+    width: 100%;
+    height: 100%;
+}
+.slideout-wrapper{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 260px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: none;
+}
+.slideout-panel {
+    position: relative;
+    z-index: 1;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+    display: block;
+    background-color: #2f3438;
+}
+#menu.slideout-wrapper ul, #menu.slideout-wrapper ul li{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    display: block;
+    float: initial;
+    padding: 0px;
+}
+#menu.slideout-wrapper ul.uNav{
+    margin-top: 50px;
+    height: initial;
+}
+#menu.slideout-wrapper ul.uNav li{
+    background: url(../img/social-nav-sprites.png) 210px -104px no-repeat;
+    line-height: 48px;
+    font-size: 15px;
+}
+#menu.slideout-wrapper ul li{
+    width: 100%;
+}
+#menu.slideout-wrapper ul li a{
+    padding: 0px 15px;
+    color: #fff;
+    display: block;
+}
+#menu.slideout-wrapper .mob_subscriptions{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    padding: 25px 0px;
+    border-top: 1px solid #4d4d4d;
+}
+#menu.slideout-wrapper .mob_subscriptions li{
+    padding-left: 10px;
+}
+#menu.slideout-wrapper .mob_subscriptions li:first-child{
+    margin-bottom: 15px;
+}
+#menu.slideout-wrapper .mob_subscriptions li a{
+    font-size: 11px;
+    padding: 5px 3px 5px 32px;
+    background-color: #222222;
+    background-image: url(../img/social-nav-sprites.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 235px;
+    line-height: 15px;
+    text-align: left;
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+#menu.slideout-wrapper .mob_subscriptions li a span{
+    color: #6d8d23;
+    display: inline-block;
+    height: 10px;
+    padding: 0px;
+}
+#menu.slideout-wrapper .mob_subscriptions li a#newsletter{
+    background-position: -477px -47px;
+}
+#menu.slideout-wrapper .mob_subscriptions li a.tv_channel{
+    background-position: -477px -68px;
+}
+
+#menu.slideout-wrapper .mob_social_nav li{
+    float: left;
+    display: inline-block;
+    background-color: #222222;
+    width: initial;
+    border: none;
+}
+#menu.slideout-wrapper .mob_social_nav li a{
+    width: 43px;
+    height: 43px;
+    padding: 0px;
+    background-image: url(../img/social-nav-sprites.png);
+    overflow: hidden;
+    text-indent: 100%;
+}
+#menu.slideout-wrapper .mob_social_nav li a.home{
+    background-position: -430px 127px;
+}
+#menu.slideout-wrapper .mob_social_nav li a#fb{
+    background-position: -214px 127px;
+}
+#menu.slideout-wrapper .mob_social_nav li a#tw{
+    background-position: -258px 127px;
+}
+#menu.slideout-wrapper .mob_social_nav li a#inst{
+    background-position: -298px 127px;
+}
+#menu.slideout-wrapper .mob_social_nav li a#pin{
+    background-position: -338px 127px;
+}
+#menu.slideout-wrapper .mob_social_nav li a#yt{
+    background-position: -386px 127px;
+}
+
+/*
+    css rules for the slideout mobile element for the page
+*/
+
+#network-head-wrap {
+    width: 100%;
+    background-color: #6D8D23;
+    border-bottom: 3px solid #2F3438;
+}
+#network-head-main {
+    max-width: 940px;
+    margin: 0 auto;
+}
+#network-head-logo {
+    padding: 10px 0;
+}
+#network-wrap{
+    width: 100%;
+    background-color: #6D8D23;
+    border-bottom: #2F3438 3px solid;
+}
+.social_shell{
+    background-color: #6d8d23;
+}
+.social_shell .content{
+    max-width: 940px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.social_nav{
+    background-color: #232526;
+    height: 23px;
+    text-align: right;
+    line-height: normal;
+}
+.social_nav ul{
+    list-style: none;
+    height: 100%;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden;
+}
+.social_nav li{
+    display: inline-block;
+}
+.social_nav li a{
+    height: 22px;
+    display: inline-block;
+    color: #CCC;
+    font-size: 12px;
+    float: left;
+}
+.social_nav li a:hover{
+    color:#9F9F9F;
+}
+.social_nav .icon{
+    width: 40px;
+    background-image: url("../img/social-nav-sprites.png");
+    background-repeat: no-repeat;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.social_nav #newsletter{
+    text-align: center;
+    padding: 0px 10px 0px;
+    vertical-align: super;
+    border-left: solid 1px #CCC;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+.social_nav .social_last{
+    border-right: solid 1px #CCC;
+}
+.social_nav #fb{
+    background-position: 0px -23px;
+}
+.social_nav #tw{
+    background-position: -40px -23px;
+}
+.social_nav #inst{
+    background-position: -80px -23px;
+}
+.social_nav #pin{
+    background-position: -120px -23px;
+}
+.social_nav #yt{
+    background-position: -160px -23px;
+}
+.social_nav #fb:hover{
+    background-position: left top;
+}
+.social_nav #tw:hover{
+    background-position: -40px top;
+}
+.social_nav #inst:hover{
+    background-position: -80px top;
+}
+.social_nav #pin:hover{
+    background-position: -120px top;
+}
+.social_nav #yt:hover{
+    background-position: -160px top;
+}
+.site_nav{
+    max-width: 940px;
+    margin: 0 auto;
+}
+.site_brand{
+    position: relative;
+    height: 70px;
+    float: left;
+    margin-top: 5px;
+}
+
+.uNav{
+    display: inline-block;
+    margin: 0px auto;
+    height: 78px;
+    list-style: none;
+    max-width: 940px;
+    padding: 0px;
+    float: left;
+}
+.uNav li{
+    float: left;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+.uNav li#cl-blog{
+    display: none;
+}
+.uNav li:hover, .hovered{
+    background: url("../img/main_nav_hover.png") bottom center no-repeat;
+    color: #2F3438;
+}
+.uNav li a{
+    height: 100%;
+    padding: 39px 25px 0px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+}
+.uNav li a:hover{
+    color: #2F3438;
+}
+#network-logo{
+    display: inline-block;
+    height: 100%;
+    width: 213px;
+    margin-right: 18px;
+    background: url("..//img/logo_CL.png") top left no-repeat;
+    text-indent: -100%;
+    overflow: hidden;
+}
+.mobile_ham{
+    display: none;
+    width: 40px;
+    background: url("../img/general_sprites.png") top left no-repeat;
+    height: 40px;
+    float: left;
+    margin: 21px 10px 0px 0px;
+}
+.mobile_ham div{
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.mega_nav{
+    position: relative;
+    background-color: #2F3438;
+    padding:2px 0px;
+    width: 100%;
+}
+#mega_container{
+    margin: 0 auto;
+    max-width: 940px;
+}
+#mega_shows, #mega_tv, #mega_mag, #mega_shop{
+    display: none;
+    color: #fff;
+}
+#mega_container ul{
+    list-style: none;
+    display: inline-block;
+    float: left;
+    padding: 10px 30px 10px 0px;
+    border-right: solid 2px #5b5a5a;
+    margin: 0px;
+}
+#mega_container ul a{
+    line-height: 35px;
+    color: #fff;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* footer styles */
+#footer{
+    border-top: solid #d7d7d7 1px;
+}
+#network-foot-wrap{
+    position: relative;
+}
+#uniFooter{
+    position: relative;
+    max-width: 940px;
+    margin: 0 auto;
+    text-transform: uppercase;
+}
+#f_icon, .f_links_container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+}
+.f_links_container{
+    margin: 0px 210px 0px 80px;
+    padding-left: 10px;
+    /*width: 60%;*/
+}
+#f_icon a{
+    color: #555;
+    display: block;
+    width: 71px;
+    height: 64px;
+    background: url("../img/ChairMobile.png") top left no-repeat;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/ChairMobile.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/ChairMobile.png', sizingMethod='scale')";
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+#f_links{
+    width: 100%;
+}
+#f_links div, #f_social li{
+    display: inline-block;
+}
+#f_social li{
+    float: left;
+    border-right: solid #d7d7d7 1px;
+}
+#f_social li:first-child{
+    border-left: solid #d7d7d7 1px;
+}
+#f_links div{
+    float: left;
+}
+#f_links a{
+    display: block;
+    padding: 10px 0px 5px;
+    margin-right: 10px;
+    font-size: 10px;
+    color: #555;
+}
+#f_links a:hover{
+    text-decoration: underline;
+}
+#f_social{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+#f_social ul{
+    padding: 0px;
+    margin: 0px;
+}
+#f_social a{
+    display: inline-block;
+    background-image: url("../img/social-nav-sprites.png");
+    height: 57px;
+    width: 40px;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+
+}
+
+#f_social ~ div{
+    position: relative;
+}
+#footer_fb{
+    background-position: 398px 10px;
+}
+#footer_tw{
+    background-position: 360px 10px;
+}
+#footer_inst{
+    background-position: 320px 10px;
+}
+#footer_pin{
+    background-position: 280px 10px;
+}
+#footer_yt{
+    background-position: 240px 10px;
+}
+
+#footer_fb:hover{
+    background-position: 199px 10px;
+}
+#footer_tw:hover{
+    background-position: 161px 10px;
+}
+#footer_inst:hover{
+    background-position: 121px 10px;
+}
+#footer_pin:hover{
+    background-position: 81px 10px;
+}
+#footer_yt:hover{
+    background-position: 41px 10px;
+}
+#uniFooter .copyright{
+    line-height: 15px;
+    font-size: 10px;
+    color: #555;
+}
+@media screen and (max-width: 960px){
+    .social_nav, .site_nav, #header-main, #footer-main, #network-foot-wrap{
+        padding: 0px 20px;
+    }
+
+
+}
+@media screen and (max-width: 800px){
+
+    .site_brand{
+        margin-top:7px;
+    }
+    #network-logo{
+        position: relative;
+        width: 200px;
+        background-size: cover;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/logo_CL.png', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/logo_CL.png', sizingMethod='scale')";
+    }
+    .uNav li a{
+        padding: 43px 5px 0px;
+    }
+    #f_icon{
+        position: absolute;
+    }
+    .f_links_container{
+        margin: 0px 0px 0px 80px;
+        display: inline-block;
+    }
+    #f_social{
+        position: relative;
+        display: block;
+        clear: both;
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    #f_social ul{
+        display: inline-block;
+    }
+
+}
+@media screen and (max-width: 640px){
+    #network-wrap .social_nav{
+        display: none;
+    }
+    .mobile_ham{
+        display: inline-block;
+    }
+    .uNav{
+        display: none;
+    }
+
+    .uNav li a{
+        padding: 43px 5px 0px;
+    }
+
+    #sidr .uNav {
+        border: none;
+        width: 100%;
+        height: initial;
+        border-top: none;
+        border-bottom: 1px solid #4d4d4d;
+    }
+    #site-head .sidr ul.uNav li{
+        display:block;
+        width: 100%;
+        border: none;
+        background: url(../img/social-nav-sprites.png) 210px -104px no-repeat;
+    }
+    #site-head #sidr .uNav li:hover{
+
+    }
+    #site-head #sidr{
+        padding-top: 50px;
+        text-transform: uppercase;
+    }
+    #sidr .uNav li a:hover {
+        color: #999;
+    }
+    #site-head #sidr .mob_subscriptions{
+        display: inline-block;
+        width: 100%;
+    }
+    #site-head #sidr .mob_subscriptions{
+        text-align: center;
+    }
+    #site-head #sidr .mob_subscriptions ul, #site-head #sidr .mob_subscriptions li{
+        border: none;
+    }
+    #site-head #sidr .mob_subscriptions li{
+        height: 40px;
+        line-height: 38px;
+    }
+    #site-head #sidr .mob_subscriptions li a{
+        font-size: 11px;
+        padding: 5px 3px 5px 32px;
+        background-color: #222222;
+        background-image: url(../img/social-nav-sprites.png);
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 235px;
+        line-height: 15px;
+        text-align: left;
+        box-sizing: border-box;
+    }
+    #site-head #sidr .mob_subscriptions li a span{
+        color: #6d8d23;
+        display: inline-block;
+        height: 10px;
+        padding: 0px;
+    }
+    #site-head #sidr .mob_subscriptions li a.newsletter{
+        background-position: -477px -47px;
+    }
+    #site-head #sidr .mob_subscriptions li a.tv_channel{
+        background-position: -477px -68px;
+    }
+    #site-head #sidr .mob_subscriptions li a.c_shows{
+        background-position: -477px -89px;
+    }
+    #site-head #sidr .mob_social_nav{
+        display: inline-block;
+    }
+    #site-head #sidr .mob_social_nav ul{
+        display: inline-block;
+        background-color: #333;
+        padding: 0px;
+        border: none;
+    }
+    #site-head #sidr .mob_social_nav ul li{
+        float: left;
+        display: inline-block;
+        background-color: #222222;
+        width: initial;
+        border: none;
+    }
+    #site-head .sidr .mob_social_nav ul li a{
+        width: 43px;
+        height: 43px;
+        padding: 0px;
+        background-image: url(../img/social-nav-sprites.png);
+    }
+    #site-head .sidr .mob_social_nav ul li a.home{
+        background-position: -430px 127px;
+    }
+    #site-head .sidr .mob_social_nav ul li a.fb{
+        background-position: -214px 127px;
+    }
+    #site-head .sidr .mob_social_nav ul li a.tw{
+        background-position: -258px 127px;
+    }
+    #site-head .sidr .mob_social_nav ul li a.inst{
+        background-position: -298px 127px;
+    }
+    #site-head .sidr .mob_social_nav ul li a.pin{
+        background-position: -338px 127px;
+    }
+    #site-head .sidr .mob_social_nav ul li a.yt{
+        background-position: -386px 127px;
+    }
+    #uniFooter {
+        text-align: center;
+    }
+    #f_icon{
+        position: relative;
+        margin-top: 20px;
+    }
+    .f_links_container{
+        position: relative;
+        margin: 0px;
+        display: block;
+        width: 100%;
+        padding-left: 0px;
+    }
+    #f_links{
+        text-align: center;
+    }
+    #f_links div{
+        float: none;
+    }
+}
+@media screen and (max-width: 480px){
+    .mobile_ham{
+        margin-top: 21px;
+    }
+
+
+    #network-logo{
+        margin-right: 0px;
+        margin-left: 10px;
+    }
+    .uNav{
+        display: none;
+    }
+    #sidr .uNav li{
+        float: none;
+    }
+    #f_icon{
+        margin-bottom: 10px;
+    }
+    #f_links a {
+        padding: 7px 15px;
+        display: inline-block;
+    }
+    #uniFooter .copyright{
+        margin: 5px 0px;
+        display: block;
+        clear: both;
+    }
+    #f_social{
+        display: none;
+    }
+}
+@media screen and (max-width: 320px){
+    .social_nav{
+        text-align: left;
+    }
+    .social_nav ul{
+        padding: 0px;
+    }
+    .social_nav .icon{
+        width: 38px;
+    }
+    #f_links{
+        width: 60%;
+    }
+    #f_links div{
+        display: block;
+    }
+}
+
+
+
+

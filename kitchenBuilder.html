@@ -1,0 +1,77 @@
+<div class="main_wrapper" ng-controller="kitchenbuilderCtrl">
+    <div style="position:relative">
+        <img  id="layoutImg" ng-src="{{layoutImg}}" width="100%" style="max-width:1600px;" alt=""/>
+        <!--<div  ng-repeat="appProd in userProducts" class="layout_{{designId}}_{{appProd.applianceId}}" >-->
+            <!--<img  ng-click="setCurrentSelectedProductAndAppliance(appProd.applianceId,appProd.productId)" ng-src="img/prod_{{appProd.applianceId}}_{{appProd.productId}}.png" width="100%" height="100%" alt="{{appProd.productId}}"/>-->
+        <!--</div>-->
+        <div ng-click="setCurrentSelectedProductAndAppliance(appProd.applianceId,appProd.productId)" ng-repeat="appProd in userProducts" class="layout_{{designId}}_{{appProd.applianceId}}" ng-style="{'background-image':'url(img/prod_'+appProd.applianceId+'_'+appProd.productId+'.png)', 'background-repeat': 'no-repeat'}" ></div>
+        <div style="position: absolute; right:3%; bottom:3%"><a href="http://bosch-home.ca?cid=configurator|coop|1215|fix||cottagelife|ros|adbund" target="_blank"> <img src="img/bosch_button.png"/> </a></div>
+    </div>
+    <div class="menu_wrapper tab_container">
+        <tabset>
+            <!--SELECT KITCHEN DESIGN-->
+            <tab heading="1. Select Kitchen Design" ng-click="showTabs=true;"  active="active.select">
+                <div  ng-show="showTabs" class="select_kitchen_wrapper" >
+                    <a  ng-repeat="design in designs" href="" ng-click="designClick(design.id)">
+                        <img ng-src="img/design_thumb_{{design.id}}.jpg"  ng-class="design.id==designId?'designSelected':''" alt="{{design.name}}" class="expand margin_right_20"/>
+                     </a>
+                    <span class="next" ng-click="activateTab('appliance')" style="cursor:pointer"> Next Step <i class="fa fa-arrow-circle-right"></i></span>
+                </div>
+
+            </tab>
+            <!--SELECT APPLIANCE-->
+            <tab heading="2. Select Appliances"  ng-click="showTabs=true;" active="active.appliance">
+                <div ng-show ="showTabs">
+                    <tabset class="sub_tab_menu" >
+                        <tab ng-repeat="appliance in appliances" heading="{{appliance.name}} ({{appliance.count}})" ng-click=applianceClick(appliance.id) active="appliance.id==currentSelectedApplianceId">
+                            <!--PRODUCTS-->
+                            <div ng-repeat="product in appliance.products" class="product_wrapper" style="display: inline-block">
+                                <a ng-click="showProductDetail(product.id)" class="cursor">
+                                    <span class="image"><img ng-class="product.id==currentSelectedProductId?'productSelected':''" ng-src="img/product_thumb_{{product.id}}.jpg" width="120" alt=""/></span>
+                                    <span class="details">{{product.name}}</span>
+                                </a>
+                                <div id="productDetail"  ng-class="designId==2?'animate-slide2':'animate-slide'" ng-show="product.id==currentSelectedProductId">
+                                    <span class="close_details" ng-click=closePopUp(product.id)><i class="fa fa-times"></i></span>
+                                    <span class="image_details"><img ng-src="img/product_thumb_{{product.id}}.jpg" alt="{{product.name}}"/></span>
+                                    <br><b>Product Name:</b> {{product.name}}<br><b>Product Code:</b> {{product.code}}<br><b>Product Description:</b> {{product.description}}<br/><br/>
+                                    <i class="fa fa-info-circle"></i> <a ng-href="{{product.webUrl}}" target="_blank"><b>More Information</b></a>
+                                </div>
+                            </div>
+                        </tab>
+                    </tabset>
+                    <span class="previous" style="cursor:pointer" ng-click="activateTab('select')"><i class="fa fa-arrow-circle-left"></i> Previous Step</span>
+                    <span class="next"  style="cursor:pointer" ng-click="activateTab('finalize')">Next Step <i class="fa fa-arrow-circle-right"></i></span>
+                </div>
+            </tab>
+            <!--FINALIZE NOW-->
+            <tab heading="3. Finalize Now" ng-click="showTabs=true;" active="active.finalize">
+                <div ng-show ="showTabs" class="finalize">
+                    <div class="wrapper">
+                        <span class="cursor">
+                            <a ng-click="viewList()"><i class="fa fa-list fa-3x" style="vertical-align: middle"></i>&nbsp;&nbsp;<span style="font-size:16px;">View List</span></a>
+                        </span>
+                        <span class="cursor">
+                            <a ng-click="socialShare(1)"><i class="fa fa-facebook-square fa-3x" style="vertical-align: middle"></i>&nbsp;&nbsp;<span style="font-size:16px;" >Share on Facebook</span></a>
+                        </span>
+                        <span class="cursor">
+                            <a ng-click="socialShare(2)"><i class="fa fa-twitter-square fa-3x" style="vertical-align: middle"></i>&nbsp;&nbsp;<span style="font-size:16px;">Share on Twitter</span></a>
+                        </span>
+
+                        <br class="clearfix"/>
+                        <span class="" style="width:100%; float:left; text-align: left; cursor:pointer; padding-left:20px;" ng-click="activateTab('appliance')"><i class="fa fa-arrow-circle-left"></i> Previous Step</span>
+
+                    </div>
+                </div>
+
+            </tab>
+            <!--SHOW HIDE-->
+           <span class="show_hide">
+               <i ng-class='showTabs?"fa fa-minus":"fa fa-plus"' ng-click="showTabs=!showTabs"></i>
+
+           </span>
+        </tabset>
+    </div>
+</div>
+<div style="display: none">
+    <img   ng-repeat="design in designs" ng-src="img/design_{{design.id}}.jpg" alt=""/>
+</div>
